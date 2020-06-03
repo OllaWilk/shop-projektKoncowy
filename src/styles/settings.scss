@@ -1,20 +1,30 @@
 // VARIABLES
 
-$base-size: 12px;
-$base-padding: 24px;
-
+//color
 $black: #000;
 $white: #ffffff;
 
 $background-lightgrey: #F2F2F2;
 $background-midgrey: #E6E6E6;
 $background-darkrey: #25282A;
-$color-background: #E3E3E3;
 
 $primary: #ffd167;
 
 $sucess: #aa9c3d;
 $danger: #d58e32;
+
+
+// text
+
+$base-padding: 24px;
+$base-font-size: 16px;
+$font-size-header: 25px;
+
+$color-font: $black;
+
+$text-main: 'Montserrat', sans-serif;
+$text-logo: 'Sacramento', cursive;
+
 
 //Media breakpoints
 
@@ -22,8 +32,9 @@ $laptop-breakpoint: 1200px;
 $tablet-breakpoint: 768px;
 $mobile-breakpoint: 425px;
 
-/*transition values*/
+//transition values
 
+$transition: all 1s;
 $background-color-transition: 250ms;
 $color-transition: 250ms;
 $border-color-transition: 250ms;
@@ -33,6 +44,20 @@ $border-color-transition: 250ms;
     border-color $border-color-transition linear;
 
     transform: translate(0, 0);
+}
+
+// transform
+
+@mixin box-flex() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@mixin center-position() {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 /*BUTTONS*/

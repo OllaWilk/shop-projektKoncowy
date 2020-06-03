@@ -4,10 +4,27 @@
 
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  //font-family: 'Sacramento', cursive;
+  font-family: $text-main;
+  margin: 0;
+  background-color: $background-midgrey;
+  font-size:$base-font-size;
+  line-height: 1.7;
+  color: $color-font
+}
+
+.header {
+    font-size: $font-size-header;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 ul li.slick-active button::before {
-  color:$offer-active-dot;
- }
+  color: $offer-active-dot;
+}
