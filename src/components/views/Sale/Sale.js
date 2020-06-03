@@ -10,7 +10,7 @@ import styles from './Sale.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Post</h2>
+    <h2>Sale</h2>
     {children}
   </div>
 );

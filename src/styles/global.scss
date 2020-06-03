@@ -1,1 +1,13 @@
-@import "settings.scss";
+@import "./settings.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Sacramento&display=swap');
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  //font-family: 'Sacramento', cursive;
+}
+
+ul li.slick-active button::before {
+  color:$offer-active-dot;
+ }

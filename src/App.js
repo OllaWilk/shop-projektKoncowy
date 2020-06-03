@@ -17,6 +17,9 @@ import { Favourites } from './components/views/Favourites/Favourites';
 import { Order } from './components/views/Order/Order';
 import { NotFound } from './components/views/NotFound/NotFound';
 
+import './styles/bootstrap.scss';
+import './styles/global.scss';
+
 const theme = createMuiTheme({
   palette: {
     primary: { main: '#2B4C6F' },
@@ -32,12 +35,12 @@ const App = () => (
           <MainLayout>
             <Switch>
               <Route exact path='/' component={Homepage} />
-              <Route exact path="/product/:id" component={ProductCart} />
+              <Route exact path='/product/:id' component={ProductCart} />
               <Route exact path='/sale' component={Sale} />
               <Route exact path='/about' component={About} />
               <Route exact path='/contact' component={Contact} />
               <Route exact path='/favourites' component={Favourites} />
-              <Route exact path='/order/:id' component={Order} />
+              <Route exact path='/order' component={Order} />
               <Route path='*' component={NotFound} />
             </Switch>
           </MainLayout>

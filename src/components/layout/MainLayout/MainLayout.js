@@ -10,7 +10,16 @@ import styles from './MainLayout.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>MainLayout</h2>
+    <div className="container">
+      <div className="row">
+        <div className="col-6">
+          <span>
+            <i className="fas fa-home"/>
+          </span>
+        </div>
+        <div className="col-6">column 2</div>
+      </div>
+    </div>
     {children}
   </div>
 );
