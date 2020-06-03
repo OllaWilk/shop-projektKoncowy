@@ -6,22 +6,11 @@ import clsx from 'clsx';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './Header.module.scss';
+import styles from './ProductDetails.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <div>
-      hello from nawbar
-    </div>
-
-
-    {/* <span>
-      <i className = "fas fa-magic" / > Magic Sweets
-    </span>
-    <MenuBar/>
-    <div>pl|en</div>
-    <div>login, my favourites, basket</div> */}
-
+    <h2>ProductDetails</h2>
     {children}
   </div>
 );
@@ -42,7 +31,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as Header,
-  // Container as Header,
-  Component as HeaderComponent,
+  Component as ProductDetails,
+  // Container as ProductDetails,
+  Component as ProductDetailsComponent,
 };

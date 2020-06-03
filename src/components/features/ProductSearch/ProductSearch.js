@@ -6,11 +6,11 @@ import clsx from 'clsx';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './ProductCart.module.scss';
+import styles from './ProductSearch.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>ProductCart</h2>
+    <h2>ProductSearch</h2>
     {children}
   </div>
 );
@@ -31,7 +31,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as ProductCart,
-  // Container as ProductCart,
-  Component as ProductCartComponent,
+  Component as ProductSearch,
+  // Container as ProductSearch,
+  Component as ProductSearchComponent,
 };
