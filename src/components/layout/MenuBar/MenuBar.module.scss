@@ -1,0 +1,46 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    .menu {
+        display: flex;
+
+        @media (max-width: $laptop-breakpoint) {
+          order: 1;
+        }
+        @media (max-width: $mobile-breakpoint) {
+          display: none;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          @media (max-width: $tablet-breakpoint) {
+            flex-wrap: wrap;
+          }
+
+          li {
+            list-style: none;
+            display: flex;
+          }
+        }
+
+        a {
+          color: $color-font;
+          font-size: $base-font-size;
+          padding: 1rem;
+          text-decoration: none;
+          display: flex;
+          border-bottom: 1px solid $menuBarUnderline;
+          @extend %hoverAnimation;
+          font-weight: 500;
+
+          &:hover,
+          &.active {
+            border-color: $menuBarUnderlineActiveHover;
+          }
+        }
+    }
+
+}

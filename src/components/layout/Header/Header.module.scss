@@ -1,4 +1,20 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+
+    .header {
+        background-color: $header;
+
+          @media (max-width: $tablet-breakpoint) {
+            justify-content: center;
+          }
+          @media (max-width: $mobile-breakpoint) {
+            justify-content: center;
+          }
+
+
+        .logoHeader {
+            padding-top: 20px;
+        }
+    }
+}

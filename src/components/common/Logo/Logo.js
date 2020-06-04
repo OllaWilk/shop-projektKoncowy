@@ -6,13 +6,14 @@ import clsx from 'clsx';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './ShopSort.module.scss';
+import styles from './Logo.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>ShopSort</h2>
-
-    {children}
+    <a className={styles.logo} href="/">
+      <img className={styles.logoImg} src='/img/logo-rainbbowl_optimized.png' alt='logo' />
+      <p className={styles.logoName}>Rainbbowl</p>
+    </a>
   </div>
 );
 
@@ -32,7 +33,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as ShopSort,
-  // Container as ShopSort,
-  Component as ShopSortComponent,
+  Component as Logo,
+  // Container as Logo,
+  Component as LogoComponent,
 };

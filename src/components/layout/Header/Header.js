@@ -8,20 +8,17 @@ import clsx from 'clsx';
 
 import styles from './Header.module.scss';
 
+import { Logo } from '../../common/Logo/Logo';
+import { MenuBar } from '../MenuBar/MenuBar';
+import { UserOptions } from '../UserOptions/UserOptions';
+
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <div>
-      hello from nawbar
-    </div>
-
-
-    {/* <span>
-      <i className = "fas fa-magic" / > Magic Sweets
-    </span>
-    <MenuBar/>
-    <div>pl|en</div>
-    <div>login, my favourites, basket</div> */}
-
+    <header className={`navbar navbar-expoand-sm px-sm-5 ${styles.header}`}>
+      <Logo className={styles.logoHeader}/>
+      <MenuBar/>
+      <UserOptions />
+    </header>
     {children}
   </div>
 );
