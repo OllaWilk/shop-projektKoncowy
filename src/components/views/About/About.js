@@ -10,9 +10,24 @@ import styles from './About.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <div className={styles.img} >
-      <img  className="" src='/img/aboutOptimazed.jpg' alt='about' />
-    </div>
+    <section className={ styles.wraper }>
+      <div className={styles.imgAbout}>
+        <img src='/img/aboutOptimazed.jpg' alt='about' />
+      </div>
+      <div className={` ${styles.description}` }>
+        <h2 className={ styles.sectionTitle }>About</h2>
+        <h3 className={ styles.sectionSubtitle }>Without sweets there would be darkness and chaos..</h3>
+        <p className= { styles.paragraf }>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </section>
     {children}
   </div>
 );
