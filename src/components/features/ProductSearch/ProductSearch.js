@@ -8,7 +8,7 @@ import clsx from 'clsx';
 
 import styles from './ProductSearch.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faListUl, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import {  faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 const Component = ({className, children}) => (
@@ -20,7 +20,7 @@ const Component = ({className, children}) => (
       </button>
     </div>
 
-    
+
     {children}
   </form>
 );

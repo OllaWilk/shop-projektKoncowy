@@ -8,8 +8,8 @@ import clsx from 'clsx';
 
 import styles from './ShopSort.module.scss';
 import { ProductSearch } from '../ProductSearch/ProductSearch';
-import { faListUl, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faListUl, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const Component = ({className, children}) => (

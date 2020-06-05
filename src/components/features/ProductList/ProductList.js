@@ -8,14 +8,14 @@ import clsx from 'clsx';
 
 import styles from './ProductList.module.scss';
 import { Subtitle } from '../../common/Subtitle/Subtitle';
-
-// import { Product } from '../Product/Product';
-
+import { storeProducts  } from '../../../db';
+import { Product } from '../Product/Product';
+import {ProductConsumer} from '../../../context';
 
 class Component extends React.Component {
 
   state = {
-    products:[],
+    products: storeProducts,
   }
 
   static propTypes = {
@@ -24,12 +24,24 @@ class Component extends React.Component {
   }
 
   render() {
+
+    // console.log(this.state.products);
+
     const { children, className } = this.props;
     return (
       <div className={clsx(className, styles.root)}>
         <div className= {`py-5  ${styles.productListCart}`}>
           <div className='container '>
             <Subtitle subtitle="Choose youre fawourite..." />
+            <div className='row'>
+              <ProductConsumer>
+                { value =>{
+                  return value.products.map( product => {
+                    return <Product key={product.id } product = {product} />;
+                  });
+                }}
+              </ProductConsumer>
+            </div>
           </div>
           {/* <Product /> */}
         </div>

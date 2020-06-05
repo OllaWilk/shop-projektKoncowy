@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { Header } from '../Header/Header';
-import { Footer }   from '../Footer/Footer';
+// import { Footer }   from '../Footer/Footer';
 
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
