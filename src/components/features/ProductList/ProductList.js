@@ -13,8 +13,11 @@ import { Product } from '../Product/Product';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>ProductList</h2>
-    <Product />
+    <div className= {styles.productListCart}>
+      <Product />
+      <Product />
+    </div>
+
     {children}
   </div>
 );

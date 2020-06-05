@@ -1,4 +1,108 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+    .ShopSort {
+        width: 550px;
+        height: 100vh;
+        position: fixed;
+        color: $background-darkrey;
+        margin: $base-padding 100px;
+        // border: 1px solid black;
+
+        .header {
+            font-size: $font-size-header;
+            font-weight: $font-weight-bold;
+        }
+
+        // .category {
+        //     border: 1px solid $product-search-border;
+        //     margin-top: 40px;
+        //     display: flex;
+        //     position: relative;
+        //     width: 250px;
+        //     height: 38px;
+        //     background-color: $white;
+
+        //     .list {
+        //       position: relative;
+        //       z-index: 1;
+        //       padding-top: 5px;
+        //       list-style-type: none;
+
+
+        //       .listCategory {
+        //         display: block;
+        //         border: none;
+        //         overflow: hidden;
+        //       }
+
+        //       li {
+        //         position: relative;
+        //         width: 250px;
+        //         display: none;
+        //         cursor: pointer;
+
+        //       }
+        //     }
+
+        //     .list:hover {
+        //       .activeList {
+        //         display: block;
+        //         background-color: $white;
+        //         width: 100%;
+        //         padding: 10px 40px;
+        //         margin-right: 0px;
+        //         left: -40px;
+
+        //         &:hover {
+        //             background-color: $background-lightgrey;
+        //             color: $background-darkrey;
+
+        //         }
+        //       }
+        //     }
+
+        //     .icon {
+        //       position: absolute;
+        //       right: 0px;
+        //       z-index: 0;
+        //       background-color: $background-darkrey;
+        //       color: $white;
+        //       height: 100%;
+        //       width: 40px;
+        //       padding: 8px;
+        //     }
+        // }
+
+        .title {
+            font-size: $font-size-title;
+            font-weight: $font-weight-bold;
+            margin: $base-padding 0;
+            color: $background-midgrey;
+        }
+
+        .categories {
+            margin: $base-padding 0;
+            padding: 0;
+            ul {
+                padding-left: 0;
+                li{
+                    margin: 40px 0;
+                    display: flex;
+                    cursor: pointer;
+                    align-items: baseline;
+                    &:hover,
+                    &.active {
+                        font-weight: $font-weight-bold;
+                        font-size: 25px;
+                    }
+
+                    .amount {
+                        margin-left: 80px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

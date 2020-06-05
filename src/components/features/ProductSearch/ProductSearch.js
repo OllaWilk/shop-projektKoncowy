@@ -7,12 +7,22 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './ProductSearch.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faListUl, faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+
 
 const Component = ({className, children}) => (
-  <div className={clsx(className, styles.root)}>
-    <h2>ProductSearch</h2>
+  <form action='' className={clsx(className, styles.root)}>
+    <div className={styles.searchField}>
+      <input placeholder='Search products...' type='text' />
+      <button>
+        <FontAwesomeIcon className={styles.icon} icon={faSearch} />
+      </button>
+    </div>
+
+    
     {children}
-  </div>
+  </form>
 );
 
 Component.propTypes = {

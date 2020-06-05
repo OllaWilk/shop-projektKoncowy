@@ -8,11 +8,6 @@ $background-lightgrey: #F2F2F2;
 $background-midgrey: #E6E6E6;
 $background-darkrey: #25282A;
 
-$primary: #ffd167;
-
-$sucess: #aa9c3d;
-$danger: #d58e32;
-
 //logo color
 
 $red: #da5358;
@@ -24,9 +19,12 @@ $purple: #6a4290;
 
 // text
 
-$base-padding: 50px;
+$base-padding: 45px;
 $base-font-size: 16px;
-$font-size-header: 25px;
+$font-size-header: 35px;
+$font-size-title: 20px;
+
+$font-weight-bold: 550;
 
 $color-font: $black;
 
@@ -70,7 +68,9 @@ $border-color-transition: 250ms;
 
 /*BUTTONS*/
 
-$offer-active-dot: $primary;
+$offer-active-dot: $yellow;
+$product-search-border: $white;
+$search-placeholder: $background-darkrey;
 
 /*Header*/
 

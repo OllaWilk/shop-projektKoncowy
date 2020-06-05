@@ -17,12 +17,12 @@ const Component = ({className, children}) => (
       <div className= "navbar navbar-expand-sm px-sm-5 ">
         <div className={`col-auto ${styles.menu} `}>
           <ul >
-            <li>
+            <li className={styles.split}>
               <a href='/' className={styles.active}>PL
               </a>
             </li>
             <li>
-              <a href='/about'>|EN</a>
+              <a href='/about' >EN</a>
             </li>
           </ul>
         </div>

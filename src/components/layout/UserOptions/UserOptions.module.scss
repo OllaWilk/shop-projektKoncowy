@@ -35,12 +35,17 @@
           align-items: center;
           @extend %hoverAnimation;
           font-weight: 500;
+          height:10px;
 
           &:hover,
           &.active {
             color: $color-font;
             border-color: $menuBarUnderlineActiveHover;
           }
+        }
+
+        .split {
+          border-right: 1px solid;
         }
     }
 

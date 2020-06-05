@@ -1,4 +1,13 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+    .productListCart {
+        display:flex;
+        max-width: calc(100% - 550px);
+        justify-content: center;
+        margin-left: 550px;
+        padding: $base-padding;
+        position: relative;
+        z-index: -1;
+    }
+}

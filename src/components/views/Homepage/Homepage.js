@@ -13,9 +13,8 @@ import { ShopSort } from '../../features/ShopSort/ShopSort';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Homepage</h2>
-    <ProductList />
     <ShopSort />
+    <ProductList />
     {children}
   </div>
 );

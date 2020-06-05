@@ -1,7 +1,6 @@
 @import '../../../styles/settings.scss';
 
 .root {
-
     .header {
         background-color: $header;
 
@@ -15,6 +14,7 @@
 
         .logoHeader {
             padding-top: 20px;
+            // margin-left:  50px;
         }
     }
 }
