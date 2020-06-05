@@ -6,40 +6,28 @@ import clsx from 'clsx';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './ProductList.module.scss';
-import { Subtitle } from '../../common/Subtitle/Subtitle';
-
-// import { Product } from '../Product/Product';
-
+import styles from './Subtitle.module.scss';
 
 class Component extends React.Component {
 
-  state = {
-    products:[],
-  }
-
   static propTypes = {
-    children: PropTypes.node,
     className: PropTypes.string,
+    subtitle: PropTypes.string,
   }
 
   render() {
-    const { children, className } = this.props;
+    const { className, subtitle } = this.props;
     return (
       <div className={clsx(className, styles.root)}>
-        <div className= {`py-5  ${styles.productListCart}`}>
-          <div className='container '>
-            <Subtitle subtitle="Choose youre fawourite..." />
+        <div className="row">
+          <div className="col-12 max-auto my-2 text-center" >
+            <h1 className= {styles.subtitle}>{ subtitle }</h1>
           </div>
-          {/* <Product /> */}
         </div>
-
-        {children}
       </div>
     );
   }
 }
-
 
 // const mapStateToProps = state => ({
 //   someProp: reduxSelector(state),
@@ -52,7 +40,7 @@ class Component extends React.Component {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as ProductList,
-  // Container as ProductList,
-  Component as ProductListComponent,
+  Component as Subtitle,
+  // Container as Title,
+  Component as SubtitleComponent,
 };

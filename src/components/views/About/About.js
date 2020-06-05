@@ -7,6 +7,8 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './About.module.scss';
+import { Title } from '../../common/Title/Title';
+import { Subtitle } from '../../common/Subtitle/Subtitle';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
@@ -15,9 +17,9 @@ const Component = ({className, children}) => (
         <img src='/img/aboutOptimazed.jpg' alt='about' />
       </div>
       <div className={` ${styles.description}` }>
-        <h2 className={ styles.sectionTitle }>About</h2>
-        <h3 className={ styles.sectionSubtitle }>Without sweets there would be darkness and chaos..</h3>
-        <p className= { styles.paragraf }>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        <Title name="About" />
+        <Subtitle subtitle="Without sweets there would be darkness and chaos..." />
+        <p className= "col-12 max-auto my-2 text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna
           aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           ullamco laboris nisi ut aliquip ex ea commodo consequat.
