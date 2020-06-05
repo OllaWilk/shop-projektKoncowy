@@ -3,12 +3,6 @@ import PropTypes from 'prop-types';
 import { storeProducts, detailProduct } from './db';
 const ProductContext = React.createContext();
 
-// prop drilling
-// context API
-// czyli sposób przekazywania danych
-
-
-
 export default class ProductProvider extends Component {
 
     state = {

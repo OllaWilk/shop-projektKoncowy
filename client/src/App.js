@@ -40,6 +40,20 @@ const App = () => (
             <Route exact path='/favourites' component={Favourites} />
             <Route exact path='/cart' component={Cart} />
             <Route path='*' component={NotFound} />
+
+            {/*
+
+            products/search/:querry
+            get products/:id
+            sprawdź querystring z "?" najpierw
+
+            reducer załaduj z serwera, załaduj o id, zaladuj wiele.
+
+            osobny reducer dla cart.
+
+            reducer zwiększ ilość, zmniejsz ilość, usuń . (order. )
+
+            */}
           </Switch>
         </MainLayout>
       </ThemeProvider>
