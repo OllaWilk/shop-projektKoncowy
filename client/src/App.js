@@ -9,7 +9,7 @@ import { CssBaseline } from '@material-ui/core';
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
 import { ProductDetails } from './components/views/ProductDetails/ProductDetails';
-import { Sale } from './components/views/Sale/Sale';
+import { Discover } from './components/views/Discover/Discover';
 import { About } from './components/views/About/About';
 import { Contact } from './components/views/Contact/Contact';
 import { Favourites } from './components/views/Favourites/Favourites';
@@ -34,7 +34,7 @@ const App = () => (
           <Switch>
             <Route exact path='/' component={Homepage} />
             <Route exact path='/product/:id' component={ProductDetails} />
-            <Route exact path='/sale' component={Sale} />
+            <Route exact path='/discover' component={Discover} />
             <Route exact path='/about' component={About} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/favourites' component={Favourites} />

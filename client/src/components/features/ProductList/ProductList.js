@@ -30,7 +30,7 @@ class Component extends React.Component {
       <div className={clsx(className, styles.root)}>
         <div className= {styles.productListCart}>
           <div >
-            <div className='row container d-flex justify-content-around '>
+            <div >
               <ProductConsumer>
                 { value =>{
                   return value.products.map( product => {

@@ -8,9 +8,9 @@ import clsx from 'clsx';
 
 import styles from './Button.module.scss';
 
-const Component = ({className, children}) => (
+const Component = ({className, children, link, buttonTitle}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Button</h2>
+    <a href={ link } className={`btn btn-outline-secondary text-uppercase ${styles.btnAbaut}`}>{ buttonTitle }</a>
     {children}
   </div>
 );
@@ -18,6 +18,8 @@ const Component = ({className, children}) => (
 Component.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  link: PropTypes.string,
+  buttonTitle: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({

@@ -18,14 +18,13 @@ const Component = ({className, children}) => (
         >
           <ul >
             <li>
-              <Link to='/' className={styles.active}>Home
-              </Link>
+              <Link to='/' className={styles.active}>Home</Link>
             </li>
             <li>
               <Link to='/about'>Abaut</Link>
             </li>
             <li>
-              <Link to='/sale'>Sale</Link>
+              <Link to='/discover'>Discover</Link>
             </li>
             <li>
               <Link to='/contact'>Contact</Link>

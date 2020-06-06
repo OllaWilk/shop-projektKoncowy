@@ -14,7 +14,7 @@ import { UserOptions } from '../UserOptions/UserOptions';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <header className={`navbar navbar-expoand-sm px-sm-5 fixed-top  ${styles.header}`}>
+    <header className={`navbar navbar-expoand-sm px-sm-5  ${styles.header}`}>
       <Logo className={styles.logoHeader}/>
       <MenuBar/>
       <UserOptions />

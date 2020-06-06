@@ -8,26 +8,33 @@ import clsx from 'clsx';
 
 import styles from './About.module.scss';
 import { Title } from '../../common/Title/Title';
-import { Subtitle } from '../../common/Subtitle/Subtitle';
+import { Button } from '../../common/Button/Button';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <section className={ styles.wraper }>
-      <div className={styles.imgAbout}>
-        {/* <img src='/img/aboutOptimazed.jpg' alt='about' /> */}
-      </div>
-      <div className={` ${styles.description}` }>
-        <Title name="About" />
-        <Subtitle subtitle="Without sweets there would be darkness and chaos..." />
-        <p className= "col-12 max-auto my-2 text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.
-        </p>
+    <section className={`  py-5 `}>
+      <div className='container '>
+        <div className={` ${styles.abaut} row `}>
+          <div className='col-10 max-auto col-md-6 my-5 '>
+            <div className='d-flex align-items-center '>
+              <Title name="About" /><strong className={styles.titleDominant}>Us</strong>
+            </div>
+            <p className='my-4 text-muted ' >Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.</p>
+            <Button link="discover" buttonTitle="explore" />
+          </div>
+          <div className='col-10 max-auto col-md-6 my-5 align-self-center '>
+            <div className={styles.aboutImgContainer}>
+              <img src='/img/aboutOptimazed.jpg' className='img-fluid ' alt='imgWe' />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     {children}

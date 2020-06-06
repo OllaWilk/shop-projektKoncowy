@@ -11,9 +11,19 @@ import { Title } from '../../common/Title/Title'
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <img  className={styles.img} src='/img/colaJelly.jpg'></img>
+    <div className='col-9 mx-auto col-md-6 col-lg-3 '>
+      <div className= 'card'>
+        <div className={`${styles.imgcontainer} p-2 `} onClick={() => console.log('you clicked me in the img container')}>
+          <a href='/product/:id'>
+            <img  className='card-img-top' src='/img/colaJelly.jpg'></img>
+          </a>
+        </div>
+      </div>
+
     <Title />
     <h2>Product</h2>
+    </div>
+
     {children}
   </div>
 );

@@ -6,7 +6,7 @@ import clsx from 'clsx';
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './Sale.module.scss';
+import styles from './Discover.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
@@ -31,7 +31,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as Sale,
+  Component as Discover,
   // Container as Sale,
-  Component as SaleComponent,
+  Component as DiscoverComponent,
 };
