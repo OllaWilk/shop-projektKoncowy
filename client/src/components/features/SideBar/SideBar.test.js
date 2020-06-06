@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ShopSortComponent } from './ShopSort';
+import { SideBarComponent } from './SideBar';
 
 describe('Component ShopSort', () => {
   it('should render without crashing', () => {
-    const component = shallow(<ShopSortComponent />);
+    const component = shallow(<SideBarComponent />);
     expect(component).toBeTruthy();
   });
 });

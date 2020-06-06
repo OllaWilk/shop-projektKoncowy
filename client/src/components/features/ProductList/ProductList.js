@@ -25,15 +25,12 @@ class Component extends React.Component {
 
   render() {
 
-    // console.log(this.state.products);
-
     const { children, className } = this.props;
     return (
       <div className={clsx(className, styles.root)}>
-        <div className= {`py-5  ${styles.productListCart}`}>
-          <div className='container '>
-            <Subtitle subtitle="Choose youre fawourite..." />
-            <div className='row'>
+        <div className= {styles.productListCart}>
+          <div >
+            <div className='row container d-flex justify-content-around '>
               <ProductConsumer>
                 { value =>{
                   return value.products.map( product => {
@@ -43,7 +40,6 @@ class Component extends React.Component {
               </ProductConsumer>
             </div>
           </div>
-          {/* <Product /> */}
         </div>
 
         {children}

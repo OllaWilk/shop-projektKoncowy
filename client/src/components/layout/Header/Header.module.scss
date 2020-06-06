@@ -3,7 +3,6 @@
 .root {
     .header {
         background-color: $header;
-
           @media (max-width: $tablet-breakpoint) {
             justify-content: center;
           }
@@ -11,10 +10,8 @@
             justify-content: center;
           }
 
-
         .logoHeader {
-            padding-top: 20px;
-            // margin-left:  50px;
+            margin: 15px 0 0 25px;
         }
     }
 }

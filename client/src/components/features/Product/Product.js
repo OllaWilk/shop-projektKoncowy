@@ -7,9 +7,12 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Product.module.scss';
+import { Title } from '../../common/Title/Title'
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
+    <img  className={styles.img} src='/img/colaJelly.jpg'></img>
+    <Title />
     <h2>Product</h2>
     {children}
   </div>

@@ -3,11 +3,7 @@
 .root {
     .productListCart {
         display:flex;
-        max-width: calc(100% - 550px);
-        justify-content: center;
-        margin-left: 550px;
-        padding: $base-padding;
-        position: relative;
+        margin-top: 155px;
         z-index: -1;
     }
 }

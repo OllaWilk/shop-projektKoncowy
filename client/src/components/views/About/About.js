@@ -14,7 +14,7 @@ const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     <section className={ styles.wraper }>
       <div className={styles.imgAbout}>
-        <img src='/img/aboutOptimazed.jpg' alt='about' />
+        {/* <img src='/img/aboutOptimazed.jpg' alt='about' /> */}
       </div>
       <div className={` ${styles.description}` }>
         <Title name="About" />

@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <nav className='container'>
+    <nav>
       <div className= "navbar navbar-expand-sm px-sm-5 ">
         <div
           className={`col-auto ${styles.menu} `}

@@ -21,7 +21,7 @@ class Component extends React.Component {
     return (
       <div className={clsx(className, styles.root)}>
         <div className="row">
-          <div className="col-12 max-auto my-2 text-center" >
+          <div className="col-12 max-auto my-2 " >
             <h1 className= {styles.title}>{ name }{ title }</h1>
           </div>
         </div>

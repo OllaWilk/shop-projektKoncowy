@@ -1,4 +1,8 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+    .footer {
+        background-color: black;
+        color: $background-lightgrey;
+    }
+}

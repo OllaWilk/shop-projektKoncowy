@@ -9,12 +9,16 @@ import clsx from 'clsx';
 import styles from './Homepage.module.scss';
 
 import { ProductList } from '../../features/ProductList/ProductList';
-import { ShopSort } from '../../features/ShopSort/ShopSort';
+import { SideBar } from '../../features/SideBar/SideBar';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <ShopSort />
-    <ProductList />
+    <div className="contaier ">
+      <div className="row">
+        <SideBar className="col-6 col-md-4 " />
+        <ProductList  className='col-12 col-sm-6 col-md-8 '/>
+      </div>
+    </div>
     {children}
   </div>
 );
