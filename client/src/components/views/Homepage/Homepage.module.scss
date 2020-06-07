@@ -2,25 +2,11 @@
 
 .root {
 
-    .store {
-        .titleDominant {
-            color: $red;
-            font-size: 5rem;
-            font-weight: 600;
-            // font-family: $text-logo;
-            margin: 0 0 0 20px;
-        }
-
-        form {
-            margin-top: 30px;
-            outline: none;
-            border: 0;
-
-            .searchBox {
-                background-color: $red;
-                color: $white;
-                outline: none;
-            }
-        }
+    .titleDominant {
+        color: $red;
+        font-size: 5rem;
+        font-weight: 600;
+        // font-family: $text-logo;
+        margin: 0 0 0 20px;
     }
 }

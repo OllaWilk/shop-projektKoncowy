@@ -7,7 +7,6 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Footer.module.scss';
-import { ProductSearch } from '../../features/ProductSearch/ProductSearch';
 
 const Component = ({classNameName, children}) => (
   <div classNameName={clsx(classNameName, styles.root)}>
@@ -29,7 +28,6 @@ const Component = ({classNameName, children}) => (
             </a>
           </div>
           <div className="col-md-6 mb-4 ">
-            <ProductSearch />
           </div>
         </div>
       </div>

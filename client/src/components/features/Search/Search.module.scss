@@ -1,0 +1,15 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    form {
+        margin-top: 30px;
+        outline: none;
+        border: 0;
+
+        .searchBox {
+            background-color: $red;
+            color: $white;
+            outline: none;
+        }
+    }
+}
