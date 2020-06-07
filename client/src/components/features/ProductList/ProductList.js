@@ -7,7 +7,7 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './ProductList.module.scss';
-import { Subtitle } from '../../common/Subtitle/Subtitle';
+import { Title } from '../../common/Title/Title';
 import { storeProducts  } from '../../../db';
 import { Product } from '../Product/Product';
 import {ProductConsumer} from '../../../context';
@@ -28,7 +28,8 @@ class Component extends React.Component {
     const { children, className } = this.props;
     return (
       <div className={clsx(className, styles.root)}>
-        <div className= {styles.productListCart}>
+        
+        {/* <div className= {styles.productListCart}>
           <div >
             <div >
               <ProductConsumer>
@@ -40,7 +41,7 @@ class Component extends React.Component {
               </ProductConsumer>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {children}
       </div>

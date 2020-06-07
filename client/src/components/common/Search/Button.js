@@ -3,29 +3,23 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import { Header } from '../Header/Header';
-import { Footer }   from '../Footer/Footer';
-
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './MainLayout.module.scss';
+import styles from './Button.module.scss';
 
-const Component = ({className, children}) => (
+const Component = ({className, children, link, buttonTitle}) => (
   <div className={clsx(className, styles.root)}>
-    <div>
-      <Header />
-      {children}
-      {/* <div className={styles.footer}>
-        <Footer />
-      </div> */}
-    </div>
+    <a href={ link } className={`btn btn-outline-secondary text-uppercase ${styles.btnAbaut}`}>{ buttonTitle }</a>
+    {children}
   </div>
 );
 
 Component.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  link: PropTypes.string,
+  buttonTitle: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({
@@ -39,7 +33,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as MainLayout,
-  // Container as MainLayout,
-  Component as MainLayoutComponent,
+  Component as Button,
+  // Container as Button,
+  Component as ButtonComponent,
 };

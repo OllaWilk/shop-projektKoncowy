@@ -9,10 +9,10 @@ import clsx from 'clsx';
 import styles from './Cart.module.scss';
 
 const Component = ({className, children}) => (
-  <div className={clsx(className, styles.root)}>
+  <section className={clsx(className, styles.root)}>
     <h2>Cart</h2>
     {children}
-  </div>
+  </section>
 );
 
 Component.propTypes = {

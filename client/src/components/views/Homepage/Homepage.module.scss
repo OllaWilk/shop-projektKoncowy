@@ -1,14 +1,26 @@
 @import '../../../styles/settings.scss';
 
 .root {
-    .container {
-        width:100%;
-        max-width: calc(100% - 240px);
-        margin: 0 auto;
-        padding: 0 15px;
-        top: 50px;
-        left: 240px;
-        position: absolute;
-        z-index: -1;
+
+    .store {
+        .titleDominant {
+            color: $red;
+            font-size: 5rem;
+            font-weight: 600;
+            // font-family: $text-logo;
+            margin: 0 0 0 20px;
+        }
+
+        form {
+            margin-top: 30px;
+            outline: none;
+            border: 0;
+
+            .searchBox {
+                background-color: $red;
+                color: $white;
+                outline: none;
+            }
+        }
     }
 }

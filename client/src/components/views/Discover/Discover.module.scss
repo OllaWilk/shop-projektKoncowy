@@ -1,0 +1,12 @@
+@import '../../../styles/settings.scss';
+
+.root {
+
+    .titleDominant {
+        color: $yellowc;
+        font-size: 5rem;
+        font-weight: 600;
+        // font-family: $text-logo;
+        margin: 0 0 0 20px;
+    }
+}

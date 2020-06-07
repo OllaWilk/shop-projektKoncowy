@@ -11,8 +11,8 @@ import { Title } from '../../common/Title/Title';
 import { Button } from '../../common/Button/Button';
 
 const Component = ({className, children}) => (
-  <div className={clsx(className, styles.root)}>
-    <section className={`  py-5 `}>
+  <section className={clsx(className, styles.root)}>
+    <div className={`  py-5 `}>
       <div className='container '>
         <div className={` ${styles.abaut} row `}>
           <div className='col-10 max-auto col-md-6 my-5 '>
@@ -36,9 +36,9 @@ const Component = ({className, children}) => (
           </div>
         </div>
       </div>
-    </section>
+    </div>
     {children}
-  </div>
+  </section>
 );
 
 Component.propTypes = {

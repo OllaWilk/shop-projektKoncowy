@@ -1,9 +1,62 @@
 @import '../../../styles/settings.scss';
 
 .root {
-    .productListCart {
-        display:flex;
-        margin-top: 155px;
-        z-index: -1;
+
+    .store {
+        .titleDominant {
+            color: $red;
+            font-size: 5rem;
+            font-weight: 600;
+            // font-family: $text-logo;
+            margin: 0 0 0 20px;
+        }
+
+        .buttonAll {
+            color: $red;
+            &:hover, &:active {
+                background-color: $red;
+                color: $white;
+            }
+        }
+
+        .buttonNews {
+            color: $red;
+            &:hover {
+                background-color: $red;
+                color: $white;
+            }
+        }
+
+        .buttonLolilipop {
+            color: $red;
+            &:hover {
+                background-color: $red;
+                color: $white;
+            }
+        }
+
+        .buttonHC {
+            color: $red;
+            &:hover {
+                background-color: $red;
+                color: $white;
+            }
+        }
+
+        .buttonJelly {
+            color: $red;
+            &:hover {
+                background-color: $red;
+                color: $white;
+            }
+        }
+
+        .buttonGums {
+            color: $red;
+            &:hover {
+                background-color: $red;
+                color: $white;
+            }
+        }
     }
 }

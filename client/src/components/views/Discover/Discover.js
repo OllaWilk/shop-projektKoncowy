@@ -7,12 +7,24 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Discover.module.scss';
+import { Title } from '../../common/Title/Title';
+
 
 const Component = ({className, children}) => (
-  <div className={clsx(className, styles.root)}>
-    <h2>Sale</h2>
+  <section className={clsx(className, styles.root)}>
+    <div className={`${styles.store} py-5`}>
+          <div className='container'>
+            <div className='row '>
+              <div className='col-10 mx-auto col-sm-6 text-center '>
+                <div className='d-flex align-items-center '>
+                  <Title name="Discover" /><strong className={styles.titleDominant}>Sweets</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     {children}
-  </div>
+  </section>
 );
 
 Component.propTypes = {
