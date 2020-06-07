@@ -28,22 +28,28 @@ class Component extends React.Component {
     const { children, className } = this.props;
     return (
       <div className={clsx(className, styles.root)}>
-        
-        {/* <div className= {styles.productListCart}>
-          <div >
-            <div >
-              <ProductConsumer>
-                { value =>{
-                  return value.products.map( product => {
-                    return <Product key={product.id } product = {product} />;
-                  });
-                }}
-              </ProductConsumer>
-            </div>
-          </div>
-        </div> */}
+        <div className= {`py-5  ${styles.productListCart}`}>
+        <div className='container '>
+        <Product />
+            <Product />
+            <Product />
+            <Product />
+            <Product />
+            {/* <ProductConsumer>
+              { value =>{
+                return value.products.map( product => {
+                  return <Product key={product.id } product = {product} />;
+                });
+              }}
+            </ProductConsumer> */}
 
         {children}
+        </div>
+
+        </div>
+
+
+
       </div>
     );
   }
