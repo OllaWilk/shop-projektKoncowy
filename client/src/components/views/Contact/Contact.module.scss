@@ -1,0 +1,53 @@
+@import '../../../styles/settings.scss';
+
+.root {
+
+    .contact {
+        border: 2px solid $orange;
+        border-radius: 1%;
+        padding: 50px;
+        min-height: 800px;
+
+        .formPosition {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 60px;
+            .titleDominant {
+                color: $orange;
+                font-size: 5rem;
+                font-weight: 600;
+                font-family: $text-logo;
+                margin: 0 0 0 20px;
+            }
+
+            form {
+                flex: 2 0 0;
+                display: block;
+
+                input, textarea {
+                    display: inline-block;
+                    padding: 10px;
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid $black;
+                    background: transparent;
+                    color: $black;
+                    height: 60px;
+                    margin: 5px 0;
+                    font-size: 15px;
+                    outline: none;
+                    max-height: 900px;
+                    &::placeholder {
+                        color: $black;
+                        font-size: 15px;
+                    }
+                }
+
+                textarea {
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+}

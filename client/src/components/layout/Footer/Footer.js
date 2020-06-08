@@ -7,20 +7,12 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Footer.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faTwitter,
-  faFacebookF,
-  faYoutube,
-  faGooglePlusG,
-  faLinkedinIn,
-  faPinterestP,
-} from '@fortawesome/free-brands-svg-icons';
+
 
 const Component = ({className, children}) => (
   <footer className={clsx(className, styles.root)}>
     <div className={styles.footerMenu}>
-      <div className='container'>
+      <div className='container '>
         <div className='row'>
           <div className='col-xs-1 col-md-6 col-lg '>
             <div className={styles.menuWrapper}>

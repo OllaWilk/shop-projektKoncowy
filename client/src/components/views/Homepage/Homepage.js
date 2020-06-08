@@ -23,7 +23,7 @@ const Component = ({className, children}) => (
         </div>
       </div>
     </div>
-    <Search />
+    {/* <Search />    TO DO SOON */}
     <ProductList />
   </section>
 );
