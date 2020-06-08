@@ -4,24 +4,10 @@
 
     .singleItem {
         transition: all 0.3 linear;
-        // height: 400px;
-        // widows: 500px;
+        margin-bottom: 60px;
+        padding: 2px ;
         &:hover {
-            box-shadow: 0 10px 15px $background-darkrey            ;
-        }
-
-        .cardBody {
-            .iconHart {
-                font-size: 25px;
-                cursor: pointer;
-                :hover {
-                    color: $orange;
-                }
-            }
-
-            .itemTitle {
-                font-size: 20px;
-            }
+            box-shadow: 0 10px 15px $background-darkrey;
         }
 
         .imgContainer {
@@ -40,6 +26,8 @@
 
             .storeImg {
                 transition: all 1s ease-in-out;
+                width: 350px;
+                height: 400px;
                 object-fit: cover;
             }
 
@@ -60,5 +48,18 @@
                 }
             }
         }
+
+        .cardBody {
+            padding: 40px 10px;
+            .iconHart {
+                font-size: 25px;
+                cursor: pointer;
+
+                :hover {
+                    color: $orange;
+                }
+            }
+        }
+
     }
 }

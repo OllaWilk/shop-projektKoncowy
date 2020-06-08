@@ -10,31 +10,32 @@ import styles from './Product.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-const Component = ({className, children}) => (
+const Component = ({
+  className, img, price, name
+}) => (
   <div className={clsx(className, styles.root)}>
-
       <div className={`card ${styles.singleItem}`} >
         <div className={styles.imgContainer}>
-          <img src='/img/mix.jpg' alt='sweet1' className={`${styles.storeImg} card-img-top `} />
+          <img src={ img } alt='sweet1' className={`${styles.storeImg} card-img-top align-items-stretch`} />
           <span className={styles.storeItemIcon }>
             <FontAwesomeIcon icon={faShoppingCart} />
           </span>
         </div>
-        <div className={`${styles.cardBody} card-body `}>
-          <div className='card-text d-flex justify-content-between '>
+        <div className={`${styles.cardBody} card-body  `}>
+          <div className='card-text d-flex justify-content-between align-items-cente'>
             <FontAwesomeIcon className={styles.iconHart} icon={faHeart} />
-            <h5 className={ styles.itemTitle }>sweet item</h5>
-            <h5 className='store-item-value'><strong>$ 12</strong></h5>
+            <h5 className={ styles.itemTitle }>{ name }</h5>
+            <h5 className='store-item-value'><strong>$ { price }</strong></h5>
           </div>
         </div>
       </div>
-
-    {children}
   </div>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
+  name: PropTypes.string,
+  price: PropTypes.number,
+  img: PropTypes.string,
   className: PropTypes.string,
 };
 

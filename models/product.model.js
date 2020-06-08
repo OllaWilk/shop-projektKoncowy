@@ -6,9 +6,10 @@ const productSchema = new mongoose.Schema({
   price: { type: Number, required: true },
   inCart: { type: Boolean },
   count: { type: Number },
-
+  total: { type: Number },
 },
   { versionKey: false }
 );
 
 module.exports = mongoose.model('Product', productSchema);
+

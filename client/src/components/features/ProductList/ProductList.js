@@ -2,40 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
-
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+import { connect } from 'react-redux';
+import { getAll } from '../../../redux/productsRedux';
+import { Product } from '../Product/Product';
 
 import styles from './ProductList.module.scss';
 
-import { storeProducts  } from '../../../db';
-import { Product } from '../Product/Product';
 
 class Component extends React.Component {
 
-  state = {
-    products: storeProducts,
-  }
 
   static propTypes = {
-    children: PropTypes.node,
     className: PropTypes.string,
+    products: PropTypes.array,
   }
 
   render() {
 
-    const { children, className } = this.props;
+    const { className, products } = this.props;
 
     return (
       <div className={clsx(className, styles.root)}>
-        <div className='container '>
-          <div className='row '>
-            <div className= 'col-lg-3 col-md-6 col-sm-12 d-flex '>
-              <Product />
-              <Product />
-              <Product />
-            </div>
-            {children}
+        <div className='container py-5 '>
+          <div  className='row justify-content-center '>
+              <div className={`${styles.wrapper}`}>
+                {products.map((product) => (<Product key={product._id} {...product} />))}
+              </div>
           </div>
         </div>
       </div>
@@ -44,18 +36,18 @@ class Component extends React.Component {
 }
 
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
+const mapStateToProps = (state) => ({
+  products: getAll(state),
+});
 
 // const mapDispatchToProps = dispatch => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+const Container = connect(mapStateToProps)(Component);
 
 export {
-  Component as ProductList,
-  // Container as ProductList,
+  // Component as ProductList,
+  Container as ProductList,
   Component as ProductListComponent,
 };
