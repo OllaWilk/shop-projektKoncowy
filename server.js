@@ -8,7 +8,7 @@ const app = express();
 
 // const cartRoutes = require('./routes/cart.routes');
 // const orderRoutes = require('./routes/order.routes');
-// const productRoutes = require('./routes/products.routes');
+const productRoutes = require('./routes/products.routes');
 
 
 /* MIDDLEWARE */
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 /* API ENDPOINTS */
 //app.use('/api', cartRoutes);
 //app.use('/api', orderRoutes);
-//app.use('/api', productsRoutes);
+app.use('/api', productRoutes);
 
 
 /* API ERROR PAGES */

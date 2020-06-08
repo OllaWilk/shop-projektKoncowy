@@ -12,7 +12,7 @@ import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <div className='col-10 col-sm-6 col-lg-4 max-auto my-3 '>
+    <div className='col-9 mx-auto col-md-6 col-lg-3'>
       <div className={`card ${styles.singleItem}`} >
         <div className={styles.imgContainer}>
           <img src='/img/mix.jpg' alt='sweet1' className={`${styles.storeImg} card-img-top `} />

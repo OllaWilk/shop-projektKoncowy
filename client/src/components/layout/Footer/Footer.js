@@ -24,7 +24,6 @@ const Component = ({className, children}) => (
             <a href="#">
                 <i className="fab fa-twitter"></i>
             </a>
-
             <a href="#">
                 <i className="fab fa-pinterest"></i>
             </a>
