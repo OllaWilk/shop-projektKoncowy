@@ -44,13 +44,9 @@ const App = () => (
             {/*
 
             products/search/:querry
-            get products/:id
             sprawdź querystring z "?" najpierw
-
             reducer załaduj z serwera, załaduj o id, zaladuj wiele.
-
             osobny reducer dla cart.
-
             reducer zwiększ ilość, zmniejsz ilość, usuń . (order. )
 
             */}
