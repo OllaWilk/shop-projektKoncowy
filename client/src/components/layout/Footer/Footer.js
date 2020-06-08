@@ -7,55 +7,58 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Footer.module.scss';
-import { Logo } from '../../common/Logo/Logo';
 
 
-const Component = ({classNameName, children}) => (
-  <footer classNameName={clsx(classNameName, styles.root)}>
-      <div className='container-fluid d-flex'>
-        <div className={`${styles.footerSocial} col-md-6 text-center p-5`}>
-            <Logo />
-          <div className="footer-icons mt-3 d-flex justify-content-around flex-wrap ">
-            <a href="#" className="footer-icon">
-              <i className="fab fa-facebook-f "> </i>
+const Component = ({className, children}) => (
+  <footer className={clsx(className, styles.root)}>
+    <div className={`${styles.footer} container-fluid footer`}>
+      <div className='row '>
+        <div className= 'col-md-6 text-center p-5' >
+          <div className={`${styles.icons} mt-3 d-flex justify-content-around flex-wrap `}>
+            <a href="#">
+                <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#" className="footer-icon">
-              <i className="fab fa-twitter "> </i>
+            <a href="#">
+                <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="footer-icon">
-              <i className="fab fa-instagram "> </i>
+            <a href="#">
+                <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="footer-icon">
-              <i className="fab fa-pinterest "> </i>
+
+            <a href="#">
+                <i className="fab fa-pinterest"></i>
             </a>
           </div>
         </div>
-        <div className='col-md-6 footer-contact text-center p-5'>
-          <h3 className={styles.contact}>contact</h3>
-          <p className='d-flex flex-wrap'>
-            <span className='m-r footer-icon'>
+        <div className={`${styles.contact} col-md-6 text-center p-5 `}>
+          <h3 className='mb-5'>
+            <img className={styles.logoImg} src='/img/logoWhite.png' alt='logo'/ > Contact
+          </h3>
+          <p className={`${styles.contactIcon} d-flex justify-content-center flex-wrap`}>
+            <span className='m-r' >
               <i class="fa fa-map-marker" aria-hidden="true"></i>
             </span>
-            <span className='m-r footer-icon'>
+            <span className='m-r' >
               ul. Ptasia 5, 57-222 Kraków
             </span>
           </p>
-          <p className='d-flex flex-wrap'>
-            <span className='m-r footer-icon'>
+          <p className={`${styles.contactIcon} d-flex justify-content-center flex-wrap`}>
+            <span className='m-r' >
               <i class="fa fa-phone" aria-hidden="true"></i>
             </span>
             <span className='m-r footer-phone'>
               609-333-938
             </span>
           </p>
-          <p className='d-flex flex-wrap'>
-            <span className='m-r footer-icon'>
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+          <p className={`${styles.contactIcon} d-flex justify-content-center flex-wrap`}>
+            <span className='m-r' >
+             <i class="fa fa-envelope" aria-hidden="true"></i>
             </span>
-            <span className='m-r footer-icon'>
+            <span className='m-r' >
               rainbbowl@.gmail.com
             </span>
           </p>
+          </div>
         </div>
       </div>
     {children}
@@ -64,7 +67,7 @@ const Component = ({classNameName, children}) => (
 
 Component.propTypes = {
   children: PropTypes.node,
-  classNameName: PropTypes.string,
+  className: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({
@@ -79,6 +82,6 @@ Component.propTypes = {
 
 export {
   Component as Footer,
-  // Container as Footer,
+  // Container as UserOptions,
   Component as FooterComponent,
 };

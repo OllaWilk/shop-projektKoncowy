@@ -11,8 +11,7 @@ import styles from './Homepage.module.scss';
 import { ProductList } from '../../features/ProductList/ProductList';
 import { Title } from '../../common/Title/Title';
 import { Search } from '../../features/Search/Search';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
 
 const Component = ({className, children}) => (
   <section className={clsx(className, styles.root)}>

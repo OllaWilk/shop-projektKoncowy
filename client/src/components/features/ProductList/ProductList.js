@@ -7,7 +7,7 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './ProductList.module.scss';
-import { Title } from '../../common/Title/Title';
+
 import { storeProducts  } from '../../../db';
 import { Product } from '../Product/Product';
 import {ProductConsumer} from '../../../context';
@@ -29,27 +29,20 @@ class Component extends React.Component {
     return (
       <div className={clsx(className, styles.root)}>
         <div className= {`py-5  ${styles.productListCart}`}>
-        <div className='container '>
-        <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            {/* <ProductConsumer>
+          <div className='row '>
+          <div className='container '>
+            <ProductConsumer>
               { value =>{
                 return value.products.map( product => {
                   return <Product key={product.id } product = {product} />;
                 });
               }}
-            </ProductConsumer> */}
+            </ProductConsumer>
+            {children}
+          </div>
 
-        {children}
         </div>
-
         </div>
-
-
-
       </div>
     );
   }

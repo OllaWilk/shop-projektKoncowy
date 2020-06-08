@@ -10,9 +10,7 @@ import styles from './Search.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '../../common/Button/Button';
-import { Title } from '../../common/Title/Title';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {  faSearch } from '@fortawesome/free-solid-svg-icons';
+
 const Component = ({className, children, link, buttonTitle}) => (
   <div className={clsx(className, styles.root)}>
       <div className="row ">

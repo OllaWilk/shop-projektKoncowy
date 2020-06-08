@@ -1,2 +1,53 @@
 @import '../../../styles/settings.scss';
 
+
+.root {
+    .footer {
+        background: $background-darkrey;
+
+        .icons {
+            a {
+                color:$background-darkrey;
+                i {
+                    font-size: 30px;
+                    background: $background-midgrey;
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    border-radius: 50%;
+                    &:hover {
+                        transform: scale(1.2,1.2);
+                        background: $orange;
+                        color:$white;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            color: $white;
+            font-size: 18px;
+            h3 {
+                font-size: 50px;
+                font-family: $text-logo;
+                .logoImg {
+                    width: 50px;
+                    padding-bottom: 10px;
+                }
+            }
+            .contactIcon {
+                margin-right: 50px;
+                cursor: pointer;
+                &:hover {
+                    color: $orange ;
+                }
+
+                i {
+                    padding-left: 1rem;
+                    margin-right: 1rem;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
