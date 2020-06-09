@@ -58,19 +58,19 @@ const Component = ({className, children}) => (
               <ul>
                 <li>
                   <p>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <i className="fa fa-map-marker" aria-hidden="true"></i>
                     ul. Ptasia 5, 57-222 Kraków
                   </p>
                 </li>
                 <li>
                   <p>
-                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <i className="fa fa-phone" aria-hidden="true"></i>
                     +48 609-45-98
                   </p>
                 </li>
                 <li>
                   <p>
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <i className="fa fa-envelope" aria-hidden="true"></i>
                     rainbbowl@kontakt.pl
                   </p>
                 </li>

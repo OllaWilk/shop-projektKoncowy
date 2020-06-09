@@ -11,12 +11,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Component = ({
-  className, img, price, name, id,
+  className, img, price, name, _id,
 }) => (
   <div className={clsx(className, styles.root)}>
       <div className={`card ${styles.singleItem}`} >
         <div className={styles.imgContainer}>
-          <a  href={`/product/${id}`}>
+          <a  href={`/product/${_id}`}>
             <img src={ img } alt='sweet1' className={`${styles.storeImg} card-img-top align-items-stretch`} />
           </a>
           <span className={styles.storeItemIcon }>
@@ -35,7 +35,7 @@ const Component = ({
 );
 
 Component.propTypes = {
-  id: PropTypes.number,
+  _id: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
   img: PropTypes.string,

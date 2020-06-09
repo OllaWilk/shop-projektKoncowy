@@ -26,7 +26,7 @@ class Component extends React.Component {
         <div className='container py-5 '>
           <div  className='row justify-content-center '>
               <div className={`${styles.wrapper}`}>
-                {products.map((product) => (<Product key={product.id} {...product} />))}
+                {products.map((product) => (<Product key={product._id} {...product} />))}
               </div>
           </div>
         </div>
