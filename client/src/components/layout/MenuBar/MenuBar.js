@@ -23,9 +23,9 @@ const Component = ({className, children}) => (
             <li>
               <Link to='/about'>Abaut</Link>
             </li>
-            <li>
-              <Link to='/discover'>Discover</Link>
-            </li>
+              {/* <li>
+                <Link to='/discover'>Discover</Link>
+              </li> */}
             <li>
               <Link to='/contact'>Contact</Link>
             </li>

@@ -29,7 +29,7 @@ const Component = ({
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
             occaecat cupidatat non proident, sunt in culpa qui officia
             deserunt mollit anim id est laborum.</p>
-            <Button link="discover" buttonTitle="explore" />
+            {/* <Button link="discover" buttonTitle="explore" /> */}
           </div>
           <div className='col-10 max-auto col-md-6 my-5 align-self-center '>
             <div className={styles.aboutImgContainer}>

@@ -18,11 +18,10 @@ const Component = ({className, children}) => (
         <div className={`col-auto ${styles.menu} `}>
           <ul >
             <li className={styles.split}>
-              <a href='/' className={styles.active}>PL
-              </a>
+              <a href='/' className={styles.active}>EN</a>
             </li>
             <li>
-              <a href='/about' >EN</a>
+              <a href='/about' >PL</a>
             </li>
           </ul>
         </div>
