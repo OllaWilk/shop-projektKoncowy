@@ -9,6 +9,7 @@ export const getProductById = ({ products }, productId) => {
   return filteredProduct.length ? filteredProduct[0] : { error: true };
 };
 
+
 /* action name creator */
 const reducerName = 'products';
 const createActionName = name => `app/${reducerName}/${name}`;

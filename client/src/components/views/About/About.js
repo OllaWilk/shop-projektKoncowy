@@ -10,7 +10,9 @@ import styles from './About.module.scss';
 import { Title } from '../../common/Title/Title';
 import { Button } from '../../common/Button/Button';
 
-const Component = ({className, children}) => (
+const Component = ({
+  className, img, price, name, _id,
+}) => (
   <section className={clsx(className, styles.root)}>
     <div className={`  py-5 `}>
       <div className='container '>
@@ -37,7 +39,6 @@ const Component = ({className, children}) => (
         </div>
       </div>
     </div>
-    {children}
   </section>
 );
 

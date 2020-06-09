@@ -1,4 +1,32 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+
+    .abaut {
+          @media (max-width: $tablet-breakpoint) {
+            justify-content: center;
+          }
+          @media (max-width: $mobile-breakpoint) {
+            justify-content: center;
+          }
+        .titleDominant {
+            color: $orange;
+            font-size: 4rem;
+            font-weight: 600;
+            font-family: $text-logo;
+            margin: 0 0 0 20px;
+        }
+
+        .btnBack {
+            margin-left:10px;
+        }
+
+        .aboutImgContainer {
+            position: relative;
+            margin-right: 20px;
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}

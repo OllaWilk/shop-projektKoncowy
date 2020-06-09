@@ -11,8 +11,8 @@ const reducers = {
 };
 
 // add blank reducers for initial state properties without reducers
-Object.keys(initialState).forEach(item => {
-  if (typeof reducers[item] == 'undefined') {
+Object.keys(initialState).forEach((item) => {
+  if (typeof reducers[item] === 'undefined') {
     reducers[item] = (statePart = null) => statePart;
   }
 });
@@ -24,6 +24,6 @@ export const store = createStore(
   combinedReducers,
   initialState,
   composeWithDevTools(
-    applyMiddleware(thunk)
-  )
+    applyMiddleware(thunk),
+  ),
 );

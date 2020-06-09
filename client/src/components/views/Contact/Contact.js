@@ -20,10 +20,39 @@ const Component = ({className, children}) => (
             <div className='d-flex align-items-center '>
               <Title name="Send" /><strong className={styles.titleDominant}>Message</strong>
             </div>
-                <input type="text" name="name" placeholder="Your name" minlength="2" maxlength="40" title="Write your name" required />
-                <input type="email" name="email" placeholder="Your e-mail" title="Write your email" required />
-                <input type="text" name="subject" placeholder="Subject" minlength="2" maxlength="40" title="Write your subject" required />
-                <textarea placeholder="Type your message here" name="message"></textarea>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  minlength="2"
+                  maxlength="40"
+                  title="Write your name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your e-mail"
+                  title="Write your email"
+                  required
+                />
+
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  minlength="2"
+                  maxlength="40"
+                  title="Write your subject"
+                  required
+                />
+
+                <textarea
+                  placeholder="Type your message here"
+                  name="message">
+                </textarea>
+
               <Button link="/contact" buttonTitle="send" />
             </form>
         </div>
