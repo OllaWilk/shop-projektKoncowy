@@ -12,6 +12,7 @@ import { Button } from '../../common/Button/Button';
 
 import { CartBox } from '../../common/CartBox/CartBox';
 
+
 const Component = ({ className }) => {
 
   return (

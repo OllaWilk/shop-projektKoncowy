@@ -7,9 +7,7 @@
         @media (max-width: $laptop-breakpoint) {
           order: 1;
         }
-        @media (max-width: $mobile-breakpoint) {
-          display: none;
-        }
+
 
         ul {
           margin: 0;
@@ -52,25 +50,5 @@
     .icon {
         color: $userOptions;
     }
-
-    .iconbascet {
-      color: $background-darkrey;
-      transition: all 1s ease-in-out;
-      &:hover {
-          transform: scale(2.2);
-      }
-
-      .bascet {
-        color: $black;
-        margin-right: 10px;
-      }
-
-      span {
-        color: $black;
-        font-weight: bold;
-      }
-
-    }
-
 }
 

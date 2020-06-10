@@ -1,4 +1,29 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+
+    .cart {
+        position: absolute;
+        min-height: 60px;
+        min-width: 450px;
+        background: $white;
+        top: 45px;
+        right: 0;
+        z-index: 1;
+
+        @media (max-width: $mobile-breakpoint) {
+          width: 100%;
+        }
+    }
+    .iconbascet {
+        color: $background-darkrey;
+        transition: all 1s ease-in-out;
+        &:hover {
+            transform: scale(1.5);
+        }
+
+        .bascet {
+          color: $black;
+        }
+    }
+}

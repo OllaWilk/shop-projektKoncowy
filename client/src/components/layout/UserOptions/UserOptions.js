@@ -9,10 +9,10 @@ import { getCart } from '../../../redux/cartRedux';
 import styles from './UserOptions.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faUser, faHeart, faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { CartMenu } from '../../common/CartMenu/CartMenu';
 
 
-const Component = ({className, cart}) => {
-  console.log('cart', cart);
+const Component = ({ className }) => {
 
   return (
     <div className={clsx(className, styles.root)}>
@@ -40,12 +40,7 @@ const Component = ({className, cart}) => {
                   <FontAwesomeIcon className={styles.icon} icon={faHeart} />
                 </a>
               </li>
-              <li className={styles.iconbascet}>
-                <a href='/cart'  >
-                  <FontAwesomeIcon  icon={faCartPlus} className={styles.bascet} />
-                  <span >{cart.products.amount}</span>
-                </a>
-              </li>
+              <CartMenu />
             </ul>
           </div>
         </div>
@@ -59,18 +54,18 @@ Component.propTypes = {
   className: PropTypes.string,
 };
 
-const mapStateToProps = state => ({
-  cart: getCart(state),
-});
+// const mapStateToProps = state => ({
+//   cart: getCart(state),
+// });
 
 // const mapDispatchToProps = dispatch => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-const Container = connect(mapStateToProps)(Component);
+// const Container = connect(mapStateToProps)(Component);
 
 export {
-  // Component as UserOptions,
-  Container as UserOptions,
+  Component as UserOptions,
+  // Container as UserOptions,
   Component as UserOptionsComponent,
 };
