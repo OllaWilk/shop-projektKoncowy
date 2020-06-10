@@ -8,6 +8,7 @@ import { getProductById } from '../../../redux/productsRedux';
 
 import styles from './ProductDetails.module.scss';
 import { Button } from '../../common/Button/Button';
+import { AmountWidget } from '../../common/AmountWidget/AmountWidget';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -15,6 +16,24 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 const Component = ({ className, products }) => {
 
   const {  name, description, img, price } = products;
+
+  const [value, setValue] = React.useState(1);
+
+  const handleAdd = () => {
+    if (value >= 1 &&  value < 10) {
+      setValue(value + 1);
+    }
+  };
+
+  const handleRemove = () => {
+    if (value <= 10 && value > 1 ) {
+      setValue(value - 1);
+    }
+  };
+
+  const onChange = ({ target }) => {
+    console.log('target', target);
+  };
 
   return (
     <section className={clsx(className, styles.root)}>
@@ -46,6 +65,7 @@ const Component = ({ className, products }) => {
                 { description }
               </p>
               <div className='d-flex'>
+                <AmountWidget value={value} onAdd={handleAdd} onRemove={handleRemove} onChange={onChange} />
                 <Button link={`/product/:id`} buttonTitle="add to cart" />
                 <Button className={styles.btnBack} link={`/ `} buttonTitle='back' />
               </div>
