@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import { connect } from 'react-redux';
 import { getProductById } from '../../../redux/productsRedux';
-import { addProduct } from '../../../redux/cartRedux.js';
+// import { addProduct } from '../../../redux/cartRedux.js';
 
 import styles from './ProductDetails.module.scss';
 import { Button } from '../../common/Button/Button';
@@ -89,12 +89,12 @@ const mapStateToProps = ( state, props ) => ({
   products: getProductById(state, props.match.params.id),
 });
 
-const mapDispatchToProps = dispatch => ({
-  addProduct: (products, amount) => dispatch(addProduct({ products, amount })),
-});
+// const mapDispatchToProps = dispatch => ({
+//   addProduct: (products, amount) => dispatch(addProduct({ products, amount })),
+// });
 
 
-const ProductDetailsContainer = connect(mapStateToProps, mapDispatchToProps )(Component);
+const ProductDetailsContainer = connect(mapStateToProps )(Component);
 
 export {
   // Component as ProductDetails,

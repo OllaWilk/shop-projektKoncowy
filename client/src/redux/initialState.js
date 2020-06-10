@@ -115,8 +115,18 @@ export const initialState = {
       error: false,
     },
   },
-  cart: {
-    products: [],
-    amount: 0,
-  },
+
+  cart: [
+    {
+      _id: '1',
+      name: 'Watermelon Lolipop',
+      price: 10,
+      img: '/img/smallImg/watermelonLollipopSmall.jpg',
+    },
+    {
+      _id: '6',
+      name: 'mint hard candy',
+      price: 17,
+      img: '/img/smallImg/mintOnPlateSmall.jpg',    },
+  ],
 };

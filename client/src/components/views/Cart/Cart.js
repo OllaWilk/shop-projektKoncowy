@@ -21,7 +21,7 @@ const Component = ({ className }) => {
         <div className='container '>
           <div className={` ${styles.cart} row `}>
           <div className='col-10 max-auto col-md-6 my-5 align-self-center  '>
-            <CartBox />
+
             <div className={styles.total}>
               <h1 className={styles.summary}>Summary: <span>10.99 $</span></h1>
             </div>

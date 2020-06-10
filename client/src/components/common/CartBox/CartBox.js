@@ -9,7 +9,7 @@ import clsx from 'clsx';
 import styles from './CartBox.module.scss';
 import { AmountWidget } from '../../common/AmountWidget/AmountWidget';
 
-const Component = ({className, children}) => {
+const Component = ({className, name, img, price }) => {
 
   const [value, setValue] = React.useState(1);
 
@@ -33,14 +33,14 @@ const Component = ({className, children}) => {
   <section className={clsx(className, styles.root)}>
     <div className={`${ styles.wrap}  mx-auto `}>
       <div className={styles.image} >
-          <img className={styles.img} src='/img/smallImg/hartSmall.jpg' alt="eloquence" />
+          <img className={styles.img} src={img} alt="eloquence" />
       </div>
       <div className={` ${styles.description} `}>
         <p id='cart-item-title ' className={ styles.productName }>
-          cart item
+          {name}
         </p>
         <div className={` ${styles.cartDesc} d-flex justify-content-between `} >
-          <span span id='cart-item-price '>$ 10.99</span>
+          <span span id='cart-item-price '>$ {price} </span>
           <AmountWidget className={styles.amountWidget} value={value} onAdd={handleAdd} onRemove={handleRemove} onChange={onChange} />
           <a href='/' id='cart-item-remove ' className={ styles.cartItemRemove }>
             <i className='fas fa-trash '></i>
@@ -53,8 +53,10 @@ const Component = ({className, children}) => {
 };
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.string,
+  img: PropTypes.string,
 };
 
 // const mapStateToProps = state => ({

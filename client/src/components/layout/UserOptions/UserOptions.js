@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import { connect } from 'react-redux';
-import { getCart } from '../../../redux/cartRedux';
+// import { connect } from 'react-redux';
+// import { getCart } from '../../../redux/cartRedux';
 
 import styles from './UserOptions.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faUser, faHeart, faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import {  faUser, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { CartMenu } from '../../common/CartMenu/CartMenu';
 
 

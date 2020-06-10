@@ -3,30 +3,52 @@ export const getCart = ({ cart }) => cart;
 
 /* action name creator */
 const reducerName = 'cart';
-const createActionName = name =>  `app/${reducerName}/${name}`;
+const createActionName = (name) => `app/${reducerName}/${name}`;
 
 /* action types */
-const ADD_TO_CART = createActionName('ADD_TO_CART');
+const FETCH_START = createActionName('FETCH_START');
+const FETCH_SUCCESS = createActionName('FETCH_SUCCESS');
+const FETCH_ERROR = createActionName('FETCH_ERROR');
 
 /* action creators */
-export const addProduct = payload => ({ payload, type: ADD_TO_CART });
+export const fetchStarted = (payload) => ({ payload, type: FETCH_START });
+export const fetchSuccess = (payload) => ({ payload, type: FETCH_SUCCESS });
+export const fetchError = (payload) => ({ payload, type: FETCH_ERROR });
 
 /* thunk creators */
 
 /* reducer */
-export const reducer = (statePart = {}, action = {}) => {
-    console.log('state', statePart);
-    console.log('action', action);
+export const reducer = (statePart = [], action = {}) => {
   switch (action.type) {
-    case ADD_TO_CART: {
-        return {
-            ...statePart,
-            products: [...statePart.products, action.payload.product ],
-            amount: statePart.amount + action.payload.amount,
-          };
+    case FETCH_START: {
+      return {
+        ...statePart,
+        loading: {
+          active: true,
+          error: false,
+        },
+      };
     }
-    default: {
+    case FETCH_SUCCESS: {
+      return {
+        ...statePart,
+        loading: {
+          active: false,
+          error: false,
+        },
+        data: action.payload,
+      };
+    }
+    case FETCH_ERROR: {
+      return {
+        ...statePart,
+        loading: {
+          active: false,
+          error: action.payload,
+        },
+      };
+    }
+    default:
       return statePart;
-    }
   }
 };

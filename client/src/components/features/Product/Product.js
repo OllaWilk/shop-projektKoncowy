@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-import { addProduct } from '../../../redux/cartRedux';
+// import { addProduct } from '../../../redux/cartRedux';
 
 import styles from './Product.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -47,14 +47,14 @@ Component.propTypes = {
 //   someProp: reduxSelector(state),
 // });
 
-const mapDispatchToProps = dispatch => ({
-   addProduct: (product, amount) => dispatch(addProduct(product, amount)),
-});
+// const mapDispatchToProps = dispatch => ({
+//    addProduct: (product, amount) => dispatch(addProduct(product, amount)),
+// });
 
-const Container = connect(null, mapDispatchToProps)(Component);
+// const Container = connect(null, mapDispatchToProps)(Component);
 
 export {
-  // Component as Product,
-  Container as Product,
+  Component as Product,
+  // Container as Product,
   Component as ProductComponent,
 };

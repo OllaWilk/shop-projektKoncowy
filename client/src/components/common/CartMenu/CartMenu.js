@@ -23,35 +23,29 @@ const Component = ({className, cart }) => {
   return (
     <section className={clsx(className, styles.root)}>
       <li className={styles.iconbascet}>
-        <a
+        <div
           className={styles.iconbascet}
           onClick={(e) => handleClick(e)}
         >
           <FontAwesomeIcon  icon={faCartPlus} className={styles.bascet} />
           <span >{cart.length}</span>
-        </a>
+        </div>
       </li>
 
       {open ? (
-        <div className={styles.cartOpen}>
-          <div className={`${styles. cart} cart sm-12 `}>
+        <div className={ styles.cartOpen }>
+          <div className={ styles.cart }>
             <div className={styles.cartItems}>
-              {cart.length ? (cart.map((prod) => (<CartBox key={prod.id} {...prod} />)))
+              {cart.length ? (cart.map((prod) => (<CartBox key={prod._id} {...prod} />)))
                 : (
-                  <small className={styles.cartEmpty}>
-                    <CartBox />
-                    <CartBox />
-                    <CartBox />
-                  </small>
+                  <div className='d-flex justify-content-center'>
+                    <p>Your cart is empty</p>
+                  </div>
                 )}
             </div>
             {cart.length ? (
               <div>
-                <Button link={`/cart`} buttonTitle="order" variant="contained" />
-                < div className='cart-buttons-container mt-3 d-felx justify-content-between '>
-                  < a href='#' className=' btn btn-black '>clear</a>
-                   < a href='#' className=' btn btn-black '>checkout</a>
-                </div>
+                <Button color="primary" variant="contained" href="/smmary">Show my order</Button>
               </div>
             ) : null}
           </div>
