@@ -9,10 +9,10 @@ import { CssBaseline } from '@material-ui/core';
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
 import { ProductDetails } from './components/views/ProductDetails/ProductDetails';
-import { Discover } from './components/views/Discover/Discover';
+// import { Discover } from './components/views/Discover/Discover';
 import { About } from './components/views/About/About';
 import { Contact } from './components/views/Contact/Contact';
-import { Favourites } from './components/views/Favourites/Favourites';
+// import { Favourites } from './components/views/Favourites/Favourites';
 import { Cart } from './components/views/Cart/Cart';
 import { NotFound } from './components/views/NotFound/NotFound';
 

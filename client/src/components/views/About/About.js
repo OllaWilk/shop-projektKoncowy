@@ -8,7 +8,7 @@ import clsx from 'clsx';
 
 import styles from './About.module.scss';
 import { Title } from '../../common/Title/Title';
-import { Button } from '../../common/Button/Button';
+// import { Button } from '../../common/Button/Button';
 
 const Component = ({
   className, img, price, name, _id,
