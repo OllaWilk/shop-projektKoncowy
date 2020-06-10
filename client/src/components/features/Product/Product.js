@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 // import { addProduct } from '../../../redux/cartRedux';
 
 import styles from './Product.module.scss';

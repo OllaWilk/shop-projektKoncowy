@@ -44,14 +44,11 @@ const Component = ({className, cart }) => {
                 )}
             </div>
             {cart.length ? (
-              <div>
-                <Button color="primary" variant="contained" href="/smmary">Show my order</Button>
-              </div>
+                <Button  buttonTitle='see my cart' variant="contained"  />
             ) : null}
           </div>
         </div>
       ) : null}
-
   </section>
   );
 }

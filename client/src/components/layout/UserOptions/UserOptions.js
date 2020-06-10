@@ -24,7 +24,7 @@ const Component = ({ className }) => {
                 <a href='/' className={styles.active}>EN</a>
               </li>
               <li>
-                <a href='/about' >PL</a>
+                <a className={styles.unactive} href='/about' >PL</a>
               </li>
             </ul>
           </div>

@@ -10,7 +10,7 @@ import styles from './Cart.module.scss';
 import { Title } from '../../common/Title/Title';
 import { Button } from '../../common/Button/Button';
 
-import { CartBox } from '../../common/CartBox/CartBox';
+// import { CartBox } from '../../common/CartBox/CartBox';
 
 
 const Component = ({ className }) => {

@@ -67,8 +67,8 @@ const Component = ({ className, products, addProduct }) => {
               </p>
               <div className='d-flex'>
                 <AmountWidget value={value} onAdd={handleAdd} onRemove={handleRemove} onChange={onChange} />
-                <Button className={styles.btnBack} buttonTitle='buy' variant="contained" onClick={() => addProduct(products, value)} />
-                <Button link={`/product`} buttonTitle="back" />
+                <Button  buttonTitle='buy' variant="contained" onClick={() => addProduct(products, value)} />
+                <Button className={styles.btnBack} link={`/product`} buttonTitle="back" />
               </div>
             </div>
           </div>
