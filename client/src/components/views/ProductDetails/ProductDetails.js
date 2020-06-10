@@ -5,6 +5,7 @@ import clsx from 'clsx';
 
 import { connect } from 'react-redux';
 import { getProductById } from '../../../redux/productsRedux';
+import { addProduct } from '../../../redux/cartRedux.js';
 
 import styles from './ProductDetails.module.scss';
 import { Button } from '../../common/Button/Button';
@@ -13,7 +14,7 @@ import { AmountWidget } from '../../common/AmountWidget/AmountWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-const Component = ({ className, products }) => {
+const Component = ({ className, products, addProduct }) => {
 
   const {  name, description, img, price } = products;
 
@@ -66,8 +67,8 @@ const Component = ({ className, products }) => {
               </p>
               <div className='d-flex'>
                 <AmountWidget value={value} onAdd={handleAdd} onRemove={handleRemove} onChange={onChange} />
-                <Button link={`/product/:id`} buttonTitle="add to cart" />
-                <Button className={styles.btnBack} link={`/ `} buttonTitle='back' />
+                <Button className={styles.btnBack} buttonTitle='buy' variant="contained" onClick={() => addProduct(products, value)} />
+                <Button link={`/product`} buttonTitle="back" />
               </div>
             </div>
           </div>
@@ -81,18 +82,19 @@ const Component = ({ className, products }) => {
 Component.propTypes = {
   className: PropTypes.string,
   products: PropTypes.object,
+  addProduct: PropTypes.func,
 };
 
 const mapStateToProps = ( state, props ) => ({
   products: getProductById(state, props.match.params.id),
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
+const mapDispatchToProps = dispatch => ({
+  addProduct: (products, amount) => dispatch(addProduct({ products, amount })),
+});
 
 
-const ProductDetailsContainer = connect(mapStateToProps )(Component);
+const ProductDetailsContainer = connect(mapStateToProps, mapDispatchToProps )(Component);
 
 export {
   // Component as ProductDetails,

@@ -32,7 +32,7 @@ const Component = ({className, children, link, buttonTitle}) => (
                 <FontAwesomeIcon className={styles.icon} icon={faSearch} />
                 </span>
               </div>
-              <input type="text" class="form-control" placeholder= 'search..' id='search'></input>
+              <input type="text" className="form-control" placeholder= 'search..' id='search'></input>
             </div>
           </form>
         </div>
